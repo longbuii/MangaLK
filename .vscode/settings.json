@@ -5,5 +5,6 @@
     "editor.stickyScroll.maxLineCount": 1,
     "scm.inputMaxLineCount": 1,
     "zenMode.hideLineNumbers": false,
-    "editor.lineNumbers": "on"
+    "editor.lineNumbers": "on",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true
 }
