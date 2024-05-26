@@ -6,5 +6,9 @@
     "scm.inputMaxLineCount": 1,
     "zenMode.hideLineNumbers": false,
     "editor.lineNumbers": "on",
-    "editor.bracketPairColorization.independentColorPoolPerBracketType": true
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.formatOnSave": true,
+    "files.autoSave": "onFocusChange",
+    "csharp.suppressDotnetRestoreNotification": true,
+    "omnisharp.enableRoslynAnalyzers": true
 }
