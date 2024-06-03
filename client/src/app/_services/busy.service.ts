@@ -5,15 +5,15 @@ import { NgxSpinnerService } from 'ngx-spinner';
   providedIn: 'root'
 })
 export class BusyService {
-  busyRequestCount = 0
+  busyRequestCount = 0;
 
   constructor(private spinnerService: NgxSpinnerService) { }
 
   busy() {
     this.busyRequestCount++;
     this.spinnerService.show(undefined, {
-      type: 'ball-spin-fade',
-      bdColor: 'rgba(225,255,255,0)',
+      type: 'line-scale-party',
+      bdColor: 'rgba(255,255,255,0)',
       color: '#333333'
     })
   }

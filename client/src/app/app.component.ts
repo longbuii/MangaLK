@@ -5,10 +5,10 @@ import { User } from './_models/user';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'MangaLK';
+  title = 'Dating app';
   users: any;
 
   constructor(private accountService: AccountService) { }
@@ -23,4 +23,6 @@ export class AppComponent implements OnInit {
     const user: User = JSON.parse(userString);
     this.accountService.setCurrentUser(user);
   }
+
+
 }

@@ -1,14 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { ToastrModule } from 'ngx-toastr';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from 'ngx-spinner';
-import { FileUploadModule } from 'ng2-file-upload';
-import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
-import { PaginationModule } from 'ngx-bootstrap/pagination';
-
-
 
 @NgModule({
   declarations: [],
@@ -20,21 +15,14 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
       positionClass: 'toast-bottom-right'
     }),
     NgxSpinnerModule.forRoot({
-      type: 'ball-spin-fade'
-    }),
-    FileUploadModule,
-    BsDatepickerModule.forRoot(),
-    PaginationModule.forRoot()
-
+      type: 'line-scale-party'
+    })
   ],
   exports: [
     BsDropdownModule,
     ToastrModule,
     TabsModule,
-    NgxSpinnerModule,
-    FileUploadModule,
-    BsDatepickerModule,
-    PaginationModule
+    NgxSpinnerModule
   ]
 })
 export class SharedModule { }

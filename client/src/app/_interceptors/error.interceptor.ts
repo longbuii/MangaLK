@@ -3,9 +3,7 @@ import {
   HttpRequest,
   HttpHandler,
   HttpEvent,
-  HttpInterceptor,
-  HttpResponse,
-  HttpErrorResponse,
+  HttpInterceptor
 } from '@angular/common/http';
 import { Observable, catchError } from 'rxjs';
 import { NavigationExtras, Router } from '@angular/router';
@@ -17,7 +15,7 @@ export class ErrorInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     return next.handle(request).pipe(
-      catchError((error: HttpErrorResponse) => {
+      catchError(error => {
         if (error) {
           switch (error.status) {
             case 400:
@@ -30,11 +28,11 @@ export class ErrorInterceptor implements HttpInterceptor {
                 }
                 throw modelStateErrors.flat();
               } else {
-                this.toastr.error(error.error, error.status.toString());
+                this.toastr.error(error.error, error.status);
               }
               break;
             case 401:
-              this.toastr.error('Unauthorised', error.status.toString());
+              this.toastr.error('Unauthorised', error.status);
               break;
             case 404:
               this.router.navigateByUrl('/not-found');
